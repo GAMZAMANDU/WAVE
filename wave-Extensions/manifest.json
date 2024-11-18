@@ -1,0 +1,14 @@
+{
+  "name": "WAVE-Extensions",
+  "description": "Gesture-based web controllers",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "hello.html",
+      "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}
