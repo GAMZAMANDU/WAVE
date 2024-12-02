@@ -11,7 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        titleColor: "#1D1E20",
+        buttonBgColor: "#F7F7F7",
       },
+      fontFamily: {
+        threat: ["Threat", 'sans-serif'],
+      }
     },
   },
   plugins: [],
