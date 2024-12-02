@@ -1,8 +1,12 @@
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Welcome to wave-app!</h1>
-    </div>
+      <>
+        <div className="flex gap-5">
+          <Image src={"/images/logo.svg"} alt='logo' width={74} height={22}/>
+          
+        </div>
+      </>
   );
 }
