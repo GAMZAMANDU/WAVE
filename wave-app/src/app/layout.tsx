@@ -16,7 +16,7 @@ export default function RootLayout({
           backgroundAttachment: 'fixed',
         }}
       >
-      <div className="flex justify-center items-end">
+      <div className="mx-auto">
         {children}
       </div>
       </body>
