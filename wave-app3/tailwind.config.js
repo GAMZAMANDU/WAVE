@@ -11,6 +11,7 @@ export default {
         foreground: "var(--foreground)",
         titleColor: "#1D1E20",
         buttonBgColor: "#F7F7F7",
+        backdropBlur: ['responsive'],
       },
       fontFamily: {
         threat: ["Threat", 'sans-serif'],
