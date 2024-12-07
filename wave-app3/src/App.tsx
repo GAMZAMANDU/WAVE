@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './index.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+export default function App() {
+	return (
+		<>
+			<div
+				className="w-screen min-h-screen"
+				style={{
+					backgroundImage: 'url(/assets/background.png)',
+					backgroundSize: 'cover',
+					backgroundPosition: 'center',
+					backgroundAttachment: 'fixed',
+				}}>
+				<div className="mx-auto">
+					<header className="flex gap-5 mb-6">
+						<img src="/assets/logo.svg" alt="logo" width={74} height={22} />
+					</header>
+					<main>
+						<h1 className="font-bold text-4xl text-titleColor mb-4 font-threat">Hello, World</h1>
+						<section className="flex gap-2">
+							<img src="/assets/button/start-btn.svg" className="cursor-pointer" alt="start-button" width={50} height={50} />
+							<img src="/assets/button/setting-btn.svg" className="cursor-pointer" alt="setting-button" width={50} height={50} />
+						</section>
+					</main>
+				</div>
+			</div>
+		</>
+	);
 }
-
-export default App

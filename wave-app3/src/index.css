@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Threat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Threat'), url('https://fonts.cdnfonts.com/s/95719/Threat-2OAeX.woff') format('woff');
+}
