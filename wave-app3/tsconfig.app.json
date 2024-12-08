@@ -20,7 +20,16 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Alias 설정 */
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/component/*"],
+      "@assets/*": ["public/assets/*"],
+      "@store/*": ["src/store/*"],
+      "@css/*": ["src/css/*"],
+    }
   },
   "include": ["src"]
 }

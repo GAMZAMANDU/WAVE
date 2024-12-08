@@ -1,4 +1,4 @@
-import useMode from '../store/useMode';
+import useMode from '@store/useMode';
 
 const SettingButton = () => {
   const { toMode } = useMode();

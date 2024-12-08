@@ -1,6 +1,6 @@
-import ControlBox from './ControlBox';
-import useMode from '../store/useMode';
-import '../css/display.css';
+import ControlBox from '@components/ControlBox';
+import useMode from '@store/useMode';
+import '@css/display.css';
 
 const Display = () => {
 	const { mode } = useMode();

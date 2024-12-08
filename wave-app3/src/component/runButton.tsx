@@ -1,4 +1,4 @@
-import useMode from './../store/useMode';
+import useMode from '@store/useMode';
 
 const name = ['start', 'running'];
 const RunButton = () => {
