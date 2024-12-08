@@ -3,7 +3,7 @@ import { create } from 'zustand';
 
 interface ModeState {
   mode: number;
-  useMode: (value: number) => void;
+  toMode: (value: number) => void;
   toggle: () => void; 
 }
 
@@ -12,7 +12,7 @@ interface ModeState {
  */
 const useMode = create<ModeState>((set) => ({
   mode: 0,
-  useMode: (value) => set(() => ({ mode: value })),
+  toMode: (value) => set(() => ({ mode: value })),
   toggle: () => set((state) => ({ mode: state.mode === 1 ? 0 : 1 })),
 }));
 

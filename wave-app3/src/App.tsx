@@ -1,6 +1,7 @@
-import Display from './component/Display';
 import './index.css';
+import Display from './component/Display';
 import RunButton from './component/runButton';
+import SettingButton from './component/SettingButton';
 
 export default function App() {
   return (
@@ -22,18 +23,10 @@ export default function App() {
           <h1 className="mb-4 text-4xl font-bold text-center text-titleColor font-threat">
             Hello, World
           </h1>
-
           <section className="flex justify-center gap-2 mb-5">
             <RunButton/>
-            <img
-              src="/assets/button/setting.svg"
-              className="cursor-pointer"
-              alt="setting-button"
-              width={50}
-              height={50}
-            />
+            <SettingButton/>
           </section>
-
           <Display />
         </main>
       </div>
