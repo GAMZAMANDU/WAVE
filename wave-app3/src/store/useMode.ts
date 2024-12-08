@@ -13,7 +13,7 @@ interface ModeState {
 const useMode = create<ModeState>((set) => ({
   mode: 0,
   useMode: (value) => set(() => ({ mode: value })),
-  toggle: () => set((state) => ({ mode: ~state.mode })),
+  toggle: () => set((state) => ({ mode: state.mode === 1 ? 0 : 1 })),
 }));
 
 export default useMode;
