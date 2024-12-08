@@ -1,5 +1,6 @@
 import Display from './component/Display';
 import './index.css';
+import RunButton from './component/runButton';
 
 export default function App() {
   return (
@@ -23,15 +24,9 @@ export default function App() {
           </h1>
 
           <section className="flex justify-center gap-2 mb-5">
+            <RunButton/>
             <img
-              src="/assets/button/start-btn.svg"
-              className="cursor-pointer"
-              alt="start-button"
-              width={50}
-              height={50}
-            />
-            <img
-              src="/assets/button/setting-btn.svg"
+              src="/assets/button/setting.svg"
               className="cursor-pointer"
               alt="setting-button"
               width={50}
