@@ -8,7 +8,7 @@ const Display = () => {
 	return (
 		<div
 			className={`w-[40.5rem] h-[23.125rem] rounded-xl bg-white/70 backdrop-blur-md p-6 flex gap-10 transition-blur
-      ${mode ? 'filter blur-[8px]' : ''}`}>
+      ${mode ? 'filter blur-[8px] !pointer-events-none' : ''}`}>
 			<section className="w-full h-full max-w-[256px] max-h-[326px] bg-[#ECECEC] rounded-lg flex items-center justify-center">
 				<h5 className="font-PressStart2P">swipe</h5>
 			</section>
