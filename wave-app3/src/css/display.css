@@ -1,0 +1,3 @@
+.transition-blur {
+  transition: filter 0.5s ease-in-out;
+}
