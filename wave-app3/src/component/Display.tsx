@@ -16,6 +16,9 @@ const Display = () => {
 				<h4 className="text-base font-bold text-titleColor">제스처의 기능을 만들어주세요</h4>
 				<p className="font-normal text-xs text-[#AAA] mb-2">기능을 등록하지 않는다면 비활성화돼요</p>
 				<ControlBox commend="5분 후 창 닫기" />
+				<ControlBox commend="youtube 실행하기" />
+				<ControlBox commend="창 닫기" />
+				<ControlBox commend="새 탭 생성" />
 				<details>
 					<summary className="font-normal text-xs text-[#AAA] cursor-pointer list-none">+ 새로운 이벤트를 추가하세요</summary>
 				</details>

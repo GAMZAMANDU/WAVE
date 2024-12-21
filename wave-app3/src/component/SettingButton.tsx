@@ -1,3 +1,4 @@
+import '@css/settingButton.css';
 import useMode from '@store/useMode';
 
 const SettingButton = () => {
@@ -6,7 +7,7 @@ const SettingButton = () => {
   return (
     <img
       src={`/assets/button/setting.svg`}
-      className="cursor-pointer"
+      className="cursor-pointer rotate-container"
       alt={`setting-button`}
       width={50}
       height={50}
