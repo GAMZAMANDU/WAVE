@@ -1,36 +1,19 @@
 import Display from '@components/Display';
-import RunButton from '@components/runButton';
+import RunButton from '@components/RunButton';
 import SettingButton from '@components/SettingButton';
+import H1 from '@components/H1';
 
 const Home = () => {
   return (
-    <div
-      className="flex items-center justify-center w-screen min-h-screen"
-      style={{
-        backgroundImage: 'url(/assets/background.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
-    >
-      <div className="w-full max-w-[40.5rem] mx-auto">
-        <header className="flex justify-center gap-5 mb-6">
-          <img src="/assets/logo.svg" alt="logo" width={74} height={22} />
-        </header>
-
-        <main className="flex flex-col items-center">
-          <h1 className="mb-4 text-4xl font-bold text-center text-titleColor font-threat">
-            Hello, World
-          </h1>
-          <section className="flex justify-center gap-2 mb-5">
-            <RunButton/>
-            <SettingButton/>
-          </section>
-          <Display />
-        </main>
-      </div>
+    <div className="flex flex-col items-center">
+      <H1 content='Hello, world'/>
+      <section className="flex justify-center gap-2 mb-5">
+        <RunButton />
+        <SettingButton />
+      </section>
+      <Display />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
