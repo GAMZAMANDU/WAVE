@@ -36,7 +36,7 @@ const Login = () => {
     e.preventDefault();
     if (validateForm(form)) {
       try {
-        const response = await axios.post('http://10.150.150.177:8000/users', {
+        await axios.post('http://10.150.150.177:8000/users', {
           name: form.id,
           password: form.password,
         });
