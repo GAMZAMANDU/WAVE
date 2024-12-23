@@ -2,7 +2,7 @@
 	{ 
 		"id": 0,
 		"name": "특정 창 실행하기",
-    ":icon": "file_open",
+    "icon": "file_open",
 		"content": {
 			"open-window": "https://www.google.com"
 		}
