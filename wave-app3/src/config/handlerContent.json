@@ -1,6 +1,6 @@
 [
 	{ 
-		"id": 0,
+		"handler_id": 0,
 		"name": "특정 창 실행하기",
     "icon": "file_open",
 		"content": {
@@ -8,7 +8,7 @@
 		}
 	},
 	{
-		"id": 1,
+		"handler_id": 1,
     "icon" : "cancel",
 		"name": "n분 후에 창닫기",
 		"content": {
@@ -16,7 +16,7 @@
 		}
 	},
 	{
-		"id": 2,
+		"handler_id": 2,
     "icon" : "cancel",
 		"name": "즉시 창닫기",
 		"content": {
@@ -24,7 +24,7 @@
 		}
 	},
 	{
-		"id": 3,
+		"handler_id": 3,
     "icon" : "add_circle",
 		"name": "새 탭 열기",
 		"content": {
