@@ -16,6 +16,7 @@ interface HandlerState {
   handContent: HandContent[];
   toNext: () => void;
   toAppend: (handler_id: number, content: string | null) => void;
+  toDelete: (handler_id: number) => void;
 }
 
 const handContent: HandContent[] = [
@@ -53,8 +54,12 @@ const useHandler = create<HandlerState>((set) => ({
     const newHandContent = [...state.handContent];
     newHandContent[state.hand_id].content[handler_id] = content;
     return { handContent: newHandContent };
+  }),
+  toDelete: (handler_id) => set((state) => {
+    const newHandContent = [...state.handContent];
+    delete newHandContent[state.hand_id].content[handler_id];
+    return { handContent: newHandContent };
   })
-  
 }));
 
 export default useHandler;

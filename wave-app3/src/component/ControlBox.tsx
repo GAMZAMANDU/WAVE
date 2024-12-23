@@ -2,7 +2,7 @@ import handlerContent from '../config/handlerContent.json';
 import useHandler from '@store/useHandler';
 
 const ControlBox = ({ id, choice = false }: { id: number; choice?: boolean }) => {
-  const { toAppend } = useHandler();
+  const { toAppend, toDelete } = useHandler();
 
   return (
     <div
@@ -10,6 +10,8 @@ const ControlBox = ({ id, choice = false }: { id: number; choice?: boolean }) =>
       onClick={() => {
         if (choice) {
           toAppend(id, Object.values(handlerContent[id].content)[0]);
+        }else {
+          toDelete(id);
         }
       }}
     >
