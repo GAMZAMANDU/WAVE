@@ -79,10 +79,10 @@ const Login = () => {
           />
         </div>
         <div className="flex items-center justify-between">
-          <button type="submit" onClick={handleSubmit} className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline">
+          <button onMouseDown={()=>handleSubmit} className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline">
             Login
           </button>
-          <button type="button" onClick={handleSignUp} className="px-4 py-2 font-bold text-white bg-gray-500 rounded hover:bg-gray-700 focus:outline-none focus:shadow-outline">
+          <button onMouseDown={()=>handleSignUp} className="px-4 py-2 font-bold text-white bg-gray-500 rounded hover:bg-gray-700 focus:outline-none focus:shadow-outline">
             Sign up
           </button>
         </div>
