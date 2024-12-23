@@ -1,14 +1,14 @@
 import { create } from 'zustand';
 
 interface Content {
-  content: string | null;
+  [key: number]: string | null;
 }
 
 interface HandContent {
   hand_id: number;
   name: string;
   icon: string;
-  content: Content[];
+  content: Content; // 배열 제거
 }
 
 interface HandlerState {
@@ -22,25 +22,25 @@ const handContent: HandContent[] = [
     hand_id: 0,
     name: "swipe",
     icon: "file_open",
-    content: [{ content: "https://www.google.com" }]
+    content: { 0: "https://www.google.com" }
   },
   {
     hand_id: 1,
     name: "V",
     icon: "cancel",
-    content: [{ content: "5min" }]
+    content: { 1: "5min" }
   },
   {
     hand_id: 2,
     name: "Index finger",
     icon: "cancel",
-    content: [{ content: null }]
+    content: { 2: null }
   },
   {
     hand_id: 3,
     name: "Three fingers",
     icon: "add_circle",
-    content: [{ content: null }]
+    content: { 3: null }
   }
 ];
 

@@ -11,7 +11,8 @@ const Login = () => {
     return idValid && passwordValid;
   };
 
-  const handleSubmit = async (form: { id: string; password: string }) => {
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     if (validateForm(form)) {
       try {
         const response = await axios.post('http://10.150.150.177:8000/login', {
@@ -31,7 +32,8 @@ const Login = () => {
     }
   };
 
-  const handleSignUp = async () => {
+  const handleSignUp = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     if (validateForm(form)) {
       try {
         const response = await axios.post('http://10.150.150.177:8000/users', {
@@ -53,11 +55,7 @@ const Login = () => {
       <H1 content="hello. plz Login" />
       <form
         action="post"
-        className="w-full max-w-sm p-8 bg-white rounded shadow-md"
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleSubmit(form); // 로그인 처리
-        }}>
+        className="w-full max-w-sm p-8 bg-white rounded shadow-md">
         <div className="mb-4">
           <input
             type="text"
@@ -79,10 +77,10 @@ const Login = () => {
           />
         </div>
         <div className="flex items-center justify-between">
-          <button onMouseDown={()=>handleSubmit} className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline">
+          <button onClick={handleSubmit} className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline">
             Login
           </button>
-          <button onMouseDown={()=>handleSignUp} className="px-4 py-2 font-bold text-white bg-gray-500 rounded hover:bg-gray-700 focus:outline-none focus:shadow-outline">
+          <button onClick={handleSignUp} className="px-4 py-2 font-bold text-white bg-gray-500 rounded hover:bg-gray-700 focus:outline-none focus:shadow-outline">
             Sign up
           </button>
         </div>
