@@ -8,13 +8,14 @@ interface HandContent {
   hand_id: number;
   name: string;
   icon: string;
-  content: Content; // 배열 제거
+  content: Content;
 }
 
 interface HandlerState {
   hand_id: number;
   handContent: HandContent[];
   toNext: () => void;
+  toAppend: (handler_id: number, content: string | null) => void;
 }
 
 const handContent: HandContent[] = [
@@ -47,7 +48,13 @@ const handContent: HandContent[] = [
 const useHandler = create<HandlerState>((set) => ({
   hand_id: 0,
   handContent: handContent,
-  toNext: () => set((state) => ({ hand_id: (state.hand_id + 1) % handContent.length })),
+  toNext: () => set((state) => ({ hand_id: (state.hand_id + 1) % state.handContent.length })),
+  toAppend: (handler_id, content) => set((state) => {
+    const newHandContent = [...state.handContent];
+    newHandContent[state.hand_id].content[handler_id] = content;
+    return { handContent: newHandContent };
+  })
+  
 }));
 
 export default useHandler;

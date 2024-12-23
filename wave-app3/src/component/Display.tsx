@@ -23,9 +23,11 @@ const Display = () => {
 			<section className="w-full max-h-full overflow-auto">
 				<h4 className="text-base font-bold text-titleColor">제스처의 기능을 만들어주세요</h4>
 				<p className="font-normal text-xs text-[#AAA] mb-2">기능을 등록하지 않는다면 비활성화돼요</p>
-				{Object.keys(handContent[hand_id].content).map((key, index) => {
-					return <ControlBox key={index} id={Number(key)} />
-				})}
+				{Object.keys(handContent[hand_id].content)
+					.reverse()
+					.map((key, index) => {
+						return <ControlBox key={index} id={Number(key)} />
+					})}
 				
 				<button className="font-normal text-xs text-[#AAA] cursor-pointer list-none" onClick={() => setOpen(!open)}>
 					+ 새로운 이벤트를 추가하세요
@@ -36,7 +38,7 @@ const Display = () => {
 							key={index}
 							className="opacity-0 control-box-animate"
 							style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}>
-							<ControlBox id={item.handler_id} />
+							<ControlBox id={item.handler_id} choice={true} />
 						</div>
 					))}
 			</section>
