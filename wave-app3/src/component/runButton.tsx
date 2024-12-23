@@ -8,7 +8,7 @@ const RunButton = () => {
     <img
     src={`/assets/button/${name[mode]}.svg`}
     className="cursor-pointer"
-    alt={`${name[mode]}-button`}
+    alt={name[mode]}
     width={50}
     height={50}
     onClick={() => toggle()}

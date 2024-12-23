@@ -6,9 +6,9 @@ const SettingButton = () => {
 
   return (
     <img
-      src={`/assets/button/setting.svg`}
+      src="/assets/button/setting.svg"
       className="cursor-pointer rotate-container"
-      alt={`setting-button`}
+      alt="setting-button"
       width={50}
       height={50}
       onClick={() => toMode(0)}
