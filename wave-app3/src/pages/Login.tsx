@@ -20,6 +20,7 @@ const Login = () => {
         });
         alert('로그인 성공');
         localStorage.setItem('access_token', response.data.access_token);
+        console.log(response);
         window.location.href = '/';
       } catch (error) {
         console.error('Login failed', error);
