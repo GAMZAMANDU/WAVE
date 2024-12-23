@@ -66,9 +66,9 @@ const Display = () => {
 				<h4 className="text-base font-bold text-titleColor">제스처의 기능을 만들어주세요</h4>
 				<p className="font-normal text-xs text-[#AAA] mb-2">기능을 등록하지 않는다면 비활성화돼요</p>
 				{Object.keys(HandContent[id].content).map((key, index) => {
-					const content = handlerContent[Number(key)];
-					return content ? <ControlBox key={index} commend={content.name} /> : null;
+					return <ControlBox key={index} id={Number(key)} />
 				})}
+				
 				<button className="font-normal text-xs text-[#AAA] cursor-pointer list-none" onClick={() => setOpen(!open)}>
 					+ 새로운 이벤트를 추가하세요
 				</button>
@@ -78,7 +78,7 @@ const Display = () => {
 							key={index}
 							className="opacity-0 control-box-animate"
 							style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}>
-							<ControlBox commend={item.name} />
+							<ControlBox id={item.id} />
 						</div>
 					))}
 			</section>
