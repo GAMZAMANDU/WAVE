@@ -21,6 +21,7 @@ const Login = () => {
         });
         alert('로그인 성공');
         localStorage.setItem('access_token', response.data.access_token);
+        localStorage.setItem('handler_config', response.data.handler_config);
         console.log(response);
         window.location.href = '/';
       } catch (error) {

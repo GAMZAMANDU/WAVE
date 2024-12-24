@@ -16,7 +16,7 @@ const Display = () => {
 	return (
 		<div
 			className={`w-[40.5rem] h-[23.125rem] rounded-xl bg-white/70 backdrop-blur-md p-6 flex gap-10 transition-all duration-300
-      ${mode ? 'filter blur-[8px] blurred' : ''}`}>
+      ${mode ? 'filter blur-[8px] blurred pointer-events-none' : ''}`}>
 			<section className="w-full h-full max-w-[256px] max-h-[326px] bg-[#ECECEC] rounded-lg flex items-center justify-center" onClick={() => toNext()}>
 				<h5 className="font-PressStart2P">{handContent[hand_id].name}</h5>
 			</section>

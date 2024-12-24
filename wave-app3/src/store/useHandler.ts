@@ -19,6 +19,8 @@ interface HandlerState {
   toDelete: (handler_id: number) => void;
 }
 
+const handler_config = localStorage.getItem('handler_config');
+
 const handContent: HandContent[] = [
   { 
     hand_id: 0,
@@ -48,7 +50,7 @@ const handContent: HandContent[] = [
 
 const useHandler = create<HandlerState>((set) => ({
   hand_id: 0,
-  handContent: handContent,
+  handContent: handContent || handler_config,
   toNext: () => set((state) => ({ hand_id: (state.hand_id + 1) % state.handContent.length })),
   toAppend: (handler_id, content) => set((state) => {
     const newHandContent = [...state.handContent];
