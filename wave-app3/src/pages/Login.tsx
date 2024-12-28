@@ -22,6 +22,7 @@ const Login = () => {
         alert('로그인 성공');
         localStorage.setItem('access_token', response.data.access_token);
         localStorage.setItem('handler_config', response.data.handler_config);
+        localStorage.setItem('name', response.data.name);
         console.log(response);
         window.location.href = '/';
       } catch (error) {
